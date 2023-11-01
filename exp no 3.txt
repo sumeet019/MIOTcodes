@@ -1,0 +1,35 @@
+====================================================================================
+LED blink code with constant delay
+====================================================================================
+
+int LED_pin = 13;
+
+void setup() {
+  pinMode(13,OUTPUT);
+}
+
+void loop() {
+  digitalWrite(LED_pin,HIGH);
+  delay(1000);
+  digitalWrite(LED_pin,LOW);
+  delay(1000);
+}
+
+====================================================================================
+LED controlle with push button 
+====================================================================================
+
+
+int Button_state;
+int Button = 2;
+int LED_pin = 13;
+
+void setup() {
+  pinMode(13,OUTPUT);
+  pinMode(3,INPUT);
+}
+
+void loop() {
+  Button_state = digitalRead(Button);
+  digitalWrite(LED_pin,Button_state);
+}
